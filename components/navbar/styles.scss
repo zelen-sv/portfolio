@@ -1,0 +1,39 @@
+.navbar {
+  max-width: $content-restriction;
+  margin: auto;
+  height: $navbar-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__container {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: $dark-blue-75;
+  backdrop-filter: blur(10px);
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.navbar__link {
+  padding-left: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: capitalize;
+  line-height: 25px;
+  color: $blue;
+  z-index: 10;
+  transition: color 0.3s ease;
+
+  &--active {
+    color: $green;
+    transition: color 0.3s ease;
+  }
+}

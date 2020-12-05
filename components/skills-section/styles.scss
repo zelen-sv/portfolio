@@ -1,0 +1,18 @@
+.skills-section__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skills-section__item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  margin: 20px 0;
+}
+
+.skills-section__item-description {
+  margin-bottom: 0;
+}

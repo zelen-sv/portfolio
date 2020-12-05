@@ -1,0 +1,36 @@
+.content-slider__controls {
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-slider__dots {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-slider__dot-item {
+  box-sizing: border-box;
+  margin: 0 15px;
+  width: 25px;
+  height: 25px;
+  display: block;
+  border-radius: 25px;
+  background: $green;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.content-slider__dot-item--active {
+  opacity: 1;
+  background: $green;
+  width: 60px;
+  transition: all .3s;
+}
+
+.content-slider__preload {
+  display: none;
+}

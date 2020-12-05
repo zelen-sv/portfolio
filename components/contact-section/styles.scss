@@ -1,0 +1,28 @@
+.contact-section__input {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: $blue;
+  background-color: $dark;
+  border-radius: 5px;
+  padding: 27px 35px;
+  width: 440px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    color: $blue;
+  }
+}
+
+.valid {
+  border: solid 1px $green;
+}
+
+
+.contact-section__button {
+  margin-top: 10px;
+  display: block;
+}

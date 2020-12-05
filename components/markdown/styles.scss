@@ -1,0 +1,22 @@
+.markdown /deep/ {
+  h2 {
+    font-size: 32px;
+    color: $white;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  img {
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    max-width: 100%;
+  }
+
+  a {
+    color: $green;
+  }
+}

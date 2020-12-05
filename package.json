@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "core-js": "^3.6.5",
+    "graphql": "15.3.0",
+    "graphql-request": "3.1.0",
+    "highlight.js": "^10.4.1",
+    "highlightjs-vue": "^1.0.0",
+    "moment": "^2.29.1",
+    "nuxt": "^2.14.6",
+    "v-tooltip": "^2.0.3",
+    "vee-validate": "^3.4.5",
+    "vue-scrollto": "^2.20.0",
+    "vue-waypoint": "^3.5.2",
+    "vue2-touch-events": "^2.2.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.3.1"
+  }
+}

@@ -1,0 +1,34 @@
+.blog-navbar {
+  max-width: $content-restriction;
+  margin: auto;
+  height: $navbar-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-navbar__container {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: $dark-blue-75;
+  backdrop-filter: blur(10px);
+}
+
+.blog-navbar__back {
+  background: $white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 0px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    right: 5px;
+    transition: all 0.4s ease;
+  }
+}

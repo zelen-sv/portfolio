@@ -1,0 +1,37 @@
+.articles-section__list {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.articles-section__item {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 20px;
+}
+
+.articles-section__item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: $white;
+  margin: 20px 0;
+  margin-top: 0;
+}
+
+.articles-section__item-description {
+  margin-bottom: 0;
+}
+
+.articles-section__item-date {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  color: $green;
+  text-align: right;
+  margin: 0;
+}
+
+.articles-section__tags {
+  margin-top: 20px;
+}

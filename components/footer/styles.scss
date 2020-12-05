@@ -1,0 +1,44 @@
+.footer {
+  background: $dark;
+}
+
+.footer__container {
+  margin: auto;
+  padding: 22px 0;
+  box-sizing: border-box;
+  max-width: $content-restriction;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__email {
+  font-size: 24px;
+  line-height: 120%;
+  color: $blue;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $green;
+    transition: all 0.3s ease;
+  }
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__social-icon {
+  margin-left: 40px;
+  position: relative;
+  bottom: 0;
+  transition: all 0.3s ease;
+  fill: $blue;
+  display: block;
+
+  &:hover {
+    bottom: 3px;
+    transition: all 0.3s ease;
+    fill: $green;
+  }
+}
