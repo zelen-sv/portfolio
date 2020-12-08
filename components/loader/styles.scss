@@ -5,11 +5,11 @@
   width: 100vw;
   height: 100vh;
   background: $dark-blue;
-  z-index: 10002;
+  z-index: $loader-index;
 }
 
 .loader__circle {
-  z-index: 10003;
+  z-index: calc(#{$loader-index} + 1);
   position: fixed;
   top: 50%;
   left: 50%;

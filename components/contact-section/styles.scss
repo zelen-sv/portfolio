@@ -26,3 +26,26 @@
   margin-top: 10px;
   display: block;
 }
+
+@media only screen and (max-width: $medium-devices) {
+  .contact-section__input {
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 16px 20px;
+    max-width: 440px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-section__button {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: $extra-small-devices) {
+  .contact-section__button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

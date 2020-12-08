@@ -35,3 +35,13 @@
 .articles-section__tags {
   margin-top: 20px;
 }
+
+@media only screen and (max-width: $medium-devices) {
+  .articles-section__item-date {
+    display:  none;
+  }
+
+  .articles-section__item {
+    grid-template-columns: 1fr;
+  }
+}

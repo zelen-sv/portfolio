@@ -5,16 +5,18 @@
       <nuxt />
     </div>
     <v-footer />
+    <loader />
   </div>
 </template>
 
 <script>
   import BlogNavbar from '~/components/blog-navbar';
   import Footer from '~/components/footer';
+  import Loader from '~/components/loader';
 
   export default {
     components: {
-      BlogNavbar,
+      BlogNavbar, Loader,
       'v-footer': Footer
     }
   }

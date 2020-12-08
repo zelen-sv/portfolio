@@ -21,5 +21,11 @@ $next-extra-devices: 1300px;
 
 // Other
 $content-restriction: 980px;
-
 $navbar-height: 95px;
+$mobile-navbar-height: 90px;
+
+// Z Indexes
+
+$loader-index: 20;
+$navbar-index: 10;
+$mobile-side-space: 20px;

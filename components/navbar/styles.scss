@@ -10,7 +10,7 @@
 .navbar__container {
   position: sticky;
   top: 0;
-  z-index: 9;
+  z-index: $navbar-index;
   background-color: $dark-blue-75;
   backdrop-filter: blur(10px);
 }
@@ -18,7 +18,7 @@
 .navbar__links {
   display: flex;
   justify-content: flex-end;
-  z-index: 10;
+  z-index: calc(#{$navbar-index} + 1);
 }
 
 .navbar__link {
@@ -29,11 +29,17 @@
   text-transform: capitalize;
   line-height: 25px;
   color: $blue;
-  z-index: 10;
+  z-index: calc(#{$navbar-index} + 1);
   transition: color 0.3s ease;
 
   &--active {
     color: $green;
     transition: color 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: $medium-devices) {
+  .navbar__container {
+    display: none;
   }
 }

@@ -1,0 +1,98 @@
+.mobile-navbar {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: $navbar-index;
+  padding-left: $mobile-side-space;
+  padding-right: $mobile-side-space;
+  background-color: $dark-blue-75;
+  backdrop-filter: blur(10px);
+}
+
+.mobile-navbar__nav {
+  height: $mobile-navbar-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-navbar__logo {
+  z-index: calc(#{$navbar-index} + 1);
+}
+
+.mobile-navbar__hamburger {
+  z-index: calc(#{$navbar-index} + 1);
+}
+
+.mobile-navbar__content {
+  width: calc(100vw - 40px);
+  box-sizing: border-box;
+  padding: 40px 0px;
+  padding-top: calc(#{$mobile-navbar-height} + 40px);
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  background-color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-navbar__links {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.mobile-navbar__link {
+  text-transform: capitalize;
+  display: block;
+  font-size: 20px;
+  line-height: 26px;
+  color: $green;
+  padding-bottom: 30px;
+}
+
+.mobile-navbar__link--active {
+  text-decoration-line: underline;
+}
+
+.mobile-navbar__social {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: canter;
+}
+
+.mobile-navbar__email {
+  text-align: center;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: $blue;
+  margin-bottom: 25px;
+}
+
+.mobile-navbar__icons {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 46px 46px 46px;
+  grid-column-gap: 40px;
+}
+
+.mobile-navbar__icon-item {
+  fill: $blue;
+  position: relative;
+  bottom: 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    bottom: 3px;
+    transition: all 0.3s ease;
+    fill: $green;
+  }
+}
+
+@media only screen and (max-width: $medium-devices) {
+  .mobile-navbar {
+    display: block;
+  }
+}

@@ -7,7 +7,8 @@
     <hr class="section__devider">
     <content-slider>
       <div v-for="item in projects" :key="item.order" slot="slides" class="projects-section__work">
-        <div class="projects-section__image" :style="{ background: `url(${item.image.url})` }" >
+        <div class="projects-section__image"
+             :style="{ background: `url(${item.image.url})`, 'background-position': 'center' }" >
           <div class="projects-section__image-border"></div>
         </div>
 

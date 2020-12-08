@@ -34,3 +34,13 @@
 .content-slider__preload {
   display: none;
 }
+
+@media only screen and (max-width: $medium-devices) {
+  .content-slider__dots {
+    margin-top: 30px;
+  }
+
+  .content-slider__dot-item {
+    margin: 0 10px;
+  }
+}

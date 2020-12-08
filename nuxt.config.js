@@ -7,8 +7,7 @@ export default {
     title: 'portfolio',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon_16.png', sizes: '16x16' },
@@ -27,11 +26,13 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/graphcms.js', ssr: true },
+    { src: '~/plugins/loader.js', ssr: false },
     { src: '~/plugins/filters.js', ssr: true },
     { src: '~/plugins/vue-waypoint', ssr: false },
-    { src: '@/plugins/vee-validate.js', ssr: false },
+    { src: '~/plugins/vee-validate.js', ssr: false },
     { src: '~/plugins/v-tooltip', ssr: false },
-    { src: '~/plugins/vue-touch.js', ssr: false }
+    { src: '~/plugins/vue-touch.js', ssr: false },
+    { src: '~/plugins/v-scroll-lock.js', ssr: false }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

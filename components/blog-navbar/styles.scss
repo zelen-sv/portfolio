@@ -10,7 +10,7 @@
 .blog-navbar__container {
   position: sticky;
   top: 0;
-  z-index: 9;
+  z-index: $navbar-index;
   background-color: $dark-blue-75;
   backdrop-filter: blur(10px);
 }
@@ -30,5 +30,12 @@
   &:hover {
     right: 5px;
     transition: all 0.4s ease;
+  }
+}
+
+@media only screen and (max-width: $large-devices) {
+  .blog-navbar {
+    padding-left: $mobile-side-space;
+    padding-right: $mobile-side-space;
   }
 }

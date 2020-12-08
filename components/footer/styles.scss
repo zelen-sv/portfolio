@@ -42,3 +42,35 @@
     fill: $green;
   }
 }
+
+@media only screen and (max-width: $medium-devices) {
+  .footer {
+    border-radius: 5px;
+    margin: $mobile-side-space;
+    margin-bottom: 25px;
+  }
+
+  .footer__container {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__email {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    margin-bottom: 45px;
+  }
+
+  .footer__social {
+    display: grid;
+    grid-template-columns: 46px 46px 46px;
+    grid-column-gap: 40px;
+  }
+
+  .footer__social-icon {
+    margin-left: 0px;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <div class="article-page">
-    <h1>{{ article.title }}</h1>
+    <h1 class="article-page__header">{{ article.title }}</h1>
     <div class="article-page__info">
       <tags :list="article.tags" inline class="article-page__tags" />
       <div class="article-page__date">{{ article.createdAt | to_date }}</div>

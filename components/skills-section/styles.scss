@@ -16,3 +16,10 @@
 .skills-section__item-description {
   margin-bottom: 0;
 }
+
+@media only screen and (max-width: $medium-devices) {
+  .skills-section__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}

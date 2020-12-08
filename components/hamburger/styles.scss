@@ -1,0 +1,185 @@
+$hamburger-size: 50px !default;
+$hamburger-thickness: 3px !default;
+$hamburger-color: $green !default;
+$hamburger-color-hover: $green !default;
+$hamburger-color-active: $green !default;
+$hamburger-border-color: transparent !default;
+$hamburger-opacity: 1 !default;
+$hamburger-opacity-hover: 1 !default;
+$hamburger-opacity-transition-speed: 0.2s !default;
+$hamburger-padding: round($hamburger-size / 10) !default;
+$hamburger-bar-border-radius: 0 !default;
+$hamburger-bar-spacing: round($hamburger-size / 5) !default;
+$hamburger-animation-speed: 1 !default;
+
+$hamburger-bar-size: $hamburger-size - ($hamburger-padding * 2);
+$hamburger-easing: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$hamburger-easing-in: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$hamburger-easing-out: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+
+$root-two: 1.4;
+
+.hamburger {
+  height: $hamburger-size;
+  width: $hamburger-size;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  opacity: $hamburger-opacity;
+  overflow: visible;
+  padding: $hamburger-padding;
+  padding-left: 10px;
+  padding-right: 0;
+  text-transform: none;
+  transition: opacity $hamburger-opacity-transition-speed $hamburger-easing;
+
+  &:hover {
+    opacity: $hamburger-opacity-hover;
+
+    span.bar {
+      background-color: $hamburger-color-hover;
+    }
+
+    > .hamburger__inner,
+    .hamburger__bar {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        &::before,
+        &::after {
+          background-color: $hamburger-color-hover;
+        }
+      }
+    }
+  }
+
+  &.hamburger--active {
+    .hamburger__bar {
+      background-color: $hamburger-color-active;
+    }
+
+    > .hamburger__inner,
+    .hamburger__bar {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        &::before,
+        &::after {
+          background-color: $hamburger-color-active;
+        }
+      }
+    }
+  }
+
+  > .hamburger__inner {
+    margin: 0;
+    margin-top: -$hamburger-thickness / 2;
+    position: relative;
+    width: 100%;
+  }
+
+  .hamburger__bar {
+    background-color: $hamburger-color;
+    border-radius: $hamburger-bar-border-radius;
+    content: "";
+    display: block;
+    height: $hamburger-thickness;
+    position: absolute;
+    width: 100%;
+
+    &:nth-child(1) {
+      top: -$hamburger-bar-spacing;
+    }
+
+    &:nth-child(3) {
+      top: $hamburger-bar-spacing;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.hamburger {
+  $offset-y: $hamburger-bar-size / 2 / $root-two;
+  $offset-x: $hamburger-bar-size / 2 - $offset-y;
+
+  > .hamburger__inner {
+    &::before,
+    &::after {
+      background-color: $hamburger-color;
+      border-radius: $hamburger-bar-border-radius;
+      content: "";
+      display: block;
+      height: $hamburger-thickness;
+      position: absolute;
+      width: 100%;
+
+      opacity: 0;
+      transform-origin: 0 50%;
+      transition: opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
+        transform 0.4s / $hamburger-animation-speed $hamburger-easing;
+    }
+
+    &::before {
+      transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0) scaleX(0);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0) scaleX(0);
+      transition-delay: 0.1s / $hamburger-animation-speed;
+    }
+  }
+
+  .hamburger__bar {
+    transition: transform 0.4s / $hamburger-animation-speed $hamburger-easing,
+      opacity 0.4s / $hamburger-animation-speed $hamburger-easing,
+      width 0.4s / $hamburger-animation-speed $hamburger-easing;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transition-delay: (0.3 + ($i * 0.03s)) / $hamburger-animation-speed;
+      }
+    }
+  }
+
+  &.hamburger--active {
+    > .hamburger__inner {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        transform: rotate(45deg) translate3d(-$offset-x, -$offset-y, 0);
+        transition-delay: 0.4s / $hamburger-animation-speed;
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate3d(-$offset-x, $offset-y, 0);
+        transition-delay: 0.5s / $hamburger-animation-speed;
+      }
+    }
+
+    .hamburger__bar {
+      opacity: 0;
+      transform: translate3d(-10px, 0, 0);
+      width: 50%;
+
+      &:nth-child(1) {
+        transition-delay: 0s / $hamburger-animation-speed;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 0.2s / $hamburger-animation-speed;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 0.1s / $hamburger-animation-speed;
+      }
+    }
+  }
+}
