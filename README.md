@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://app.netlify.com/sites/lecouey/deploys"target="_blank" rel="noopener noreferrer">
-    <img src="https://api.netlify.com/api/v1/badges/8d9c041f-c71a-4ff1-b2a8-7d328ef72297/deploy-status" alt="Netlify Status" />
+    <img src="https://api.netlify.com/api/v1/badges/a0bdf399-2ec7-44a0-91f8-895d53e24383/deploy-status" alt="Netlify Status" />
   </a>
 </p>
 
