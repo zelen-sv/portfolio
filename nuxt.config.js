@@ -7,7 +7,8 @@ export default {
     title: 'portfolio',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { property: 'og:image', content: 'https://zelen-co.com/og-image.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon_16.png', sizes: '16x16' },

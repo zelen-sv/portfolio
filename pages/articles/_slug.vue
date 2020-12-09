@@ -24,7 +24,6 @@
           { hid: 'og:title', name: 'og:title', content: `Stas Zelenko • Articles | ${this.article.seoDesc}` },
           { hid: 'og:description', name: 'og:description', content: `Stas Zelenko • Articles | ${this.article.seoDesc}` },
           { property: 'og:site_name', content: 'Stas Zelenko' },
-          { property: 'og:image', content: 'https://zelen-co.com/og-image.jpg' },
           { property: 'og:type', content: 'website' },
           { property: 'og:url', content: 'https://zelen-co.com' },
           { property: 'keywords', content: 'stas,zelenko,zelenco,stas zelenko,portfolio,design,experience,iOS,web,developer,freelance, nuxt.js developer, full stack,vue.js developer, rails developer' },
