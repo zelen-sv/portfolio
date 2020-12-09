@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://zelen-co.com/logo-preview.png" width="300" />
+  <img alt="Logo" src="https://zelen-co.com/og-image.png" width="300" />
 </div>
 <h1 align="center">
   zelen-co.com
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://app.netlify.com/sites/lecouey/deploys"target="_blank" rel="noopener noreferrer">
+  <a href="https://app.netlify.com/sites/tender-poincare-5ffec0/deploys" target="_blank" rel="noopener noreferrer">
     <img src="https://api.netlify.com/api/v1/badges/a0bdf399-2ec7-44a0-91f8-895d53e24383/deploy-status" alt="Netlify Status" />
   </a>
 </p>

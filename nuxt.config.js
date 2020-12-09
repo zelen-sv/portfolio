@@ -45,11 +45,12 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/style-resources', '@nuxtjs/markdownit',
-    ['vue-scrollto/nuxt', { offset: -100 }]
+    ['vue-scrollto/nuxt', { offset: -100 }],
+    ['@rkaliev/nuxtjs-yandex-metrika', { id: '70293322', webvisor: true }],
   ],
 
   buildModules: [
-      '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv'
   ],
 
   markdownit: {
