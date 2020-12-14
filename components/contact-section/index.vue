@@ -5,8 +5,11 @@
       Contact
     </h1>
     <hr class="section__devider">
-    <ValidationObserver v-slot="{ handleSubmit, invalid }" tag="form" ref="form">
-      <form @submit.prevent="handleSubmit(submitMessage)">
+    <ValidationObserver v-slot="{ invalid }" tag="form" ref="form">
+      <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+        <p class="contact-section__bot-input">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
         <ValidationProvider rules="required" v-slot="{ classes }" name="Name">
           <input v-model="name" placeholder="Name" class="contact-section__input" :class="classes">
         </ValidationProvider>
@@ -24,7 +27,6 @@
 
 <script>
   import Button from '~/components/button';
-  import { createApplication } from '~/api/mutations';
 
   export default {
     components: {
@@ -40,19 +42,6 @@
     computed: {
       valid () {
         return
-      }
-    },
-    methods: {
-      async submitMessage () {
-        await this.$graphcms.request(createApplication, {
-          name: this.name,
-          email: this.email,
-          message: this.message
-        });
-        this.$scrollTo('#about');
-        this.name = '';
-        this.email = '';
-        this.message = '';
       }
     }
   }
