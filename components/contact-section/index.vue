@@ -5,8 +5,8 @@
       Contact
     </h1>
     <hr class="section__devider">
-    <ValidationObserver v-slot="{ invalid }" tag="form" ref="form">
-      <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+    <ValidationObserver v-slot="{ invalid }" tag="div">
+      <form name="contact" method="post" netlify="true" netlify-honeypot="bot-field">
         <p class="contact-section__bot-input">
           <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
         </p>
