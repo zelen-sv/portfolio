@@ -15,10 +15,10 @@
   &::placeholder {
     color: $blue;
   }
-}
 
-.valid {
-  border: solid 1px $green;
+  &:valid {
+    border: solid 1px $green;
+  }
 }
 
 .contact-section__bot-input {

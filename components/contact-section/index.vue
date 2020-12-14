@@ -10,15 +10,9 @@
         <label>Don’t fill this out if you’re human:
         <input type="hidden" name="contact" value="contact" /></label>
       </p>
-      <ValidationProvider rules="required" v-slot="{ classes }" name="Name">
-        <input v-model="name" required placeholder="Name" class="contact-section__input" :class="classes">
-      </ValidationProvider>
-      <ValidationProvider rules="required|email" v-slot="{ classes }" name="Email">
-        <input v-model="email" required placeholder="Email" type="email" class="contact-section__input" :class="classes">
-      </ValidationProvider>
-      <ValidationProvider rules="required" v-slot="{ classes }" name="Message">
-        <input v-model="message" required placeholder="Message" class="contact-section__input" :class="classes">
-      </ValidationProvider>
+      <input v-model="name" required placeholder="Name" class="contact-section__input" >
+      <input v-model="email" required placeholder="Email" type="email" class="contact-section__input" >
+      <input v-model="message" required placeholder="Message" class="contact-section__input" >
       <v-button class="contact-section__button" text="Send message" />
     </form>
   </div>
