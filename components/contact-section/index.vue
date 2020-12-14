@@ -10,9 +10,9 @@
         <label>Don’t fill this out if you’re human:
         <input type="hidden" name="contact" value="contact" /></label>
       </p>
-      <input v-model="name" required placeholder="Name" class="contact-section__input" >
-      <input v-model="email" required placeholder="Email" type="email" class="contact-section__input" >
-      <input v-model="message" required placeholder="Message" class="contact-section__input" >
+      <input v-model="name" required name="name" placeholder="Name" class="contact-section__input" >
+      <input v-model="email" required name="email" placeholder="Email" type="email" class="contact-section__input" >
+      <input v-model="message" required name="message" placeholder="Message" class="contact-section__input" >
       <v-button class="contact-section__button" text="Send message" />
     </form>
   </div>
