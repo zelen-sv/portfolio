@@ -30,7 +30,6 @@ export default {
     { src: '~/plugins/loader.js', ssr: false },
     { src: '~/plugins/filters.js', ssr: true },
     { src: '~/plugins/vue-waypoint', ssr: false },
-    { src: '~/plugins/vee-validate.js', ssr: false },
     { src: '~/plugins/v-tooltip', ssr: false },
     { src: '~/plugins/vue-touch.js', ssr: false },
     { src: '~/plugins/v-scroll-lock.js', ssr: false }

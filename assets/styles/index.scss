@@ -124,6 +124,35 @@ input, input:focus, textarea:focus, select:focus{
   text-align: right;
 }
 
+.message-sent-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-sent-page__logo {
+  margin: 40px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.message-sent-page__title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.message-sent-page__description {
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: white;
+}
 
 @media only screen and (max-width: $medium-devices) {
   .only-for-desktop {
@@ -177,6 +206,17 @@ input, input:focus, textarea:focus, select:focus{
   .article-page__date {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .message-sent-page__title {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 68px;
+  }
+
+  .message-sent-page__description {
+    font-size: 18px;
+    text-align: center;
   }
 }
 

@@ -5,23 +5,17 @@
       Contact
     </h1>
     <hr class="section__devider">
-    <ValidationObserver v-slot="{ invalid }" tag="div">
-      <form name="contact" method="post" netlify="true" netlify-honeypot="bot-field">
-        <p class="contact-section__bot-input">
-          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-        </p>
-        <ValidationProvider rules="required" v-slot="{ classes }" name="Name">
-          <input v-model="name" placeholder="Name" class="contact-section__input" :class="classes">
-        </ValidationProvider>
-        <ValidationProvider rules="required|email" v-slot="{ classes }" name="Email">
-          <input v-model="email" placeholder="Email" type="email" class="contact-section__input" :class="classes">
-        </ValidationProvider>
-        <ValidationProvider rules="required" v-slot="{ classes }" name="Message">
-          <input v-model="message" placeholder="Message" class="contact-section__input" :class="classes">
-        </ValidationProvider>
-        <v-button :disabled="invalid" class="contact-section__button" text="Send message" />
-      </form>
-    </ValidationObserver>
+    <form name="contact"
+          method="post"
+          action="/message-sent"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <input v-model="name" required name="name" placeholder="Name" type="text" class="contact-section__input" />
+      <input v-model="email" required name="email" placeholder="Email" type="email" class="contact-section__input" />
+      <input v-model="message" required name="message" placeholder="Message" type="text" class="contact-section__input" />
+      <v-button class="contact-section__button" text="Send message" type="submit" />
+    </form>
   </div>
 </template>
 
@@ -34,9 +28,9 @@
     },
     data () {
       return {
-        name: '',
-        email: '',
-        message: ''
+        name: null,
+        email: null,
+        message: null
       }
     },
     computed: {

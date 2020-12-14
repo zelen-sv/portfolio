@@ -15,10 +15,20 @@
   &::placeholder {
     color: $blue;
   }
-}
 
-.valid {
-  border: solid 1px $green;
+  &:valid {
+    border: solid 1px $green;
+  }
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $blue;
+    -webkit-box-shadow: 0 0 0px 1000px $dark inset;
+
+    &:hover, &:focus {
+      -webkit-text-fill-color: $blue;
+      -webkit-box-shadow: 0 0 0px 1000px $dark inset;
+    }
+  }
 }
 
 .contact-section__bot-input {
