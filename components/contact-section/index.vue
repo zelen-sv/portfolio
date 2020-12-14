@@ -6,9 +6,10 @@
     </h1>
     <hr class="section__devider">
     <ValidationObserver v-slot="{ invalid }" tag="div">
-      <form name="contact" method="post" netlify="true" netlify-honeypot="bot-field">
+      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
         <p class="contact-section__bot-input">
-          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          <label>Don’t fill this out if you’re human:
+          <input type="hidden" name="contact" value="contact" /></label>
         </p>
         <ValidationProvider rules="required" v-slot="{ classes }" name="Name">
           <input v-model="name" placeholder="Name" class="contact-section__input" :class="classes">
