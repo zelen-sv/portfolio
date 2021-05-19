@@ -1,5 +1,5 @@
 <template>
-  <div id="slider-head" class="content-slider">
+  <div ref="slider" class="content-slider">
     <div class="content-slider__container"
          v-touch:swipe.right="prev"
          v-touch:swipe.left="next">
@@ -64,7 +64,7 @@
       setActiveSlide () {
         this.$slots.activeSlide = this.slides[this.activeIndex]
         this.$forceUpdate()
-        this.$scrollTo('#slider-head')
+        this.$scrollTo(this.$refs.slider)
       }
     }
   }
